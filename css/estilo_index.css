@@ -1,0 +1,125 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Estilos del contenedor principal del test */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para cada pregunta */
+.question {
+    margin-bottom: 1.5rem;
+}
+
+.question h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para las opciones de respuesta */
+.options label {
+    display: block;
+    margin: 0.25rem 0;
+    cursor: pointer;
+    /* Cursor de puntero para indicar interactividad */
+}
+
+/* Estilos para los botones generales */
+.btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    /* Espacio entre botones */
+}
+
+/* Estilos para el botón secundario (Ir al Test de Lenguaje) */
+.btn-secondary {
+    background: #6c757d;
+}
+
+/* Estilos para la sección de resultados (inicialmente oculta) */
+#resultSection {
+    display: none;
+    margin-top: 2rem;
+}
+
+/* Estilos para el texto de los resultados */
+#resultText {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Estilos para el modal/popup */
+.modal-overlay {
+    display: flex;
+    /* Usar flexbox para centrar contenido */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+    position: fixed;
+    /* Fijo para cubrir toda la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo semi-transparente oscuro */
+    z-index: 1000;
+    /* Asegurar que esté por encima de todo */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    /* Ancho máximo para el contenido del modal */
+    width: 90%;
+    /* Ancho responsivo */
+    position: relative;
+    /* Para posicionar el botón de cerrar si fuera necesario */
+}
+
+.modal-content h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.modal-close-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background-color: #0056b3;
+}
