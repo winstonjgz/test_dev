@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,25 +13,30 @@
             padding: 1rem;
             background-color: #f8f9fa;
         }
+
         .container {
             max-width: 800px;
             margin: auto;
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .question {
             margin-bottom: 1.5rem;
         }
+
         .question h3 {
             margin-bottom: 0.5rem;
         }
+
         .options label {
             display: block;
             margin: 0.25rem 0;
             cursor: pointer;
         }
+
         .btn {
             margin-top: 1rem;
             padding: 0.6rem 1.2rem;
@@ -41,14 +47,17 @@
             cursor: pointer;
             font-size: 1rem;
         }
+
         #resultSection {
             display: none;
             margin-top: 2rem;
         }
+
         #resultText {
             margin-top: 1rem;
             font-size: 1.1rem;
         }
+
         #categorySummary {
             margin-top: 1rem;
             background: #e9ecef;
@@ -57,6 +66,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Test de Orientación: ¿Qué Lenguaje y Perfil de Desarrollo es para ti?</h1>
@@ -70,6 +80,14 @@
             <p id="resultText"></p>
             <div id="categorySummary"></div>
             <button class="btn" onclick="location.reload()">Hacer el test de nuevo</button>
+        </div>
+        <div id="resultSection">
+            <h2>Resultados</h2>
+            <canvas id="resultChart" width="400" height="200"></canvas>
+            <p id="resultText"></p>
+            <button class="btn" onclick="location.reload()">Hacer el test de nuevo</button>
+            <button class="btn btn-secondary" onclick="window.location.href='recursos_estudio.html'">¿Quieres saber
+                más?</button>
         </div>
     </div>
 
@@ -563,7 +581,7 @@
             renderQuestions();
         });
 
-        document.getElementById("testForm").addEventListener("submit", function(e) {
+        document.getElementById("testForm").addEventListener("submit", function (e) {
             e.preventDefault();
             const formData = new FormData(this);
             calculateResults(formData);
@@ -571,4 +589,5 @@
         });
     </script>
 </body>
+
 </html>
